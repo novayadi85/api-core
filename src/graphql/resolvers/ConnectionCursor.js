@@ -14,7 +14,7 @@ allowing you to request a subset of results before or after that result.
 
 export default new GraphQLScalarType({
   description,
-  name: "ConnectionCursor",
+  name: "Cursor",
   serialize: toCursor,
   parseLiteral(ast) {
     if (ast.kind === Kind.STRING) return fromCursor(ast.value);
